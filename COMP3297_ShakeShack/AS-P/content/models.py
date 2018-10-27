@@ -11,6 +11,7 @@ class user(models.Model):
     password = models.CharField(max_length=200)
     email_ID = models.CharField(max_length=200)
     token code = models.CharField(max_length=200)
+    location=models.ForeignKey(Location, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.username
@@ -48,7 +49,7 @@ class Location(models.Model):
 	longitude = models.FloatField
 	altitude = models.IntegerField
 	
-	def _str_(self);
+	def _str_(self):
 		return self.name
 
 class Distance(models.Model):
@@ -62,3 +63,15 @@ class Distance(models.Model):
 	
 	def calculate(self):
 		return mpu.haversine_distance((placeA.latitude, placeA.longitude), (placeB.latitude, placeB.longitude))
+
+class orders(models.Model):
+	orderID=models.DecimalField(max_digit=12)
+	content=models.CharField(max_length=200)
+	owner=models.ForeignKey(user,on_delete=models.CASCADE)
+	username=user.objects.select_related().get(owner.username)
+	status=models.CharField(max_length=200)
+	priority=models.CharField(max_length=200)
+	location=user.objects.select_related().get(owner.location)
+	def __str__(self):
+		return self.orderID
+		
