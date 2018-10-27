@@ -15,6 +15,16 @@ class user(models.Model):
     def __str__(self):
         return self.username
 
+class inventory(models.Model):
+    name=models.CharField(max_length=200)
+    weight=models.DecimalField(max_digit=4,decimal_places=2)
+    category=models.CharField(max_length=200)
+    description=models.CharField(max_length=200)
+    item_id=models.DecimalField(max_digit=5)
+    
+    def __str__(self):
+        return self.name
+
 class cart(models.Model):
     username = models.ForeignKey(user, on_delete=modes.CASCADE)
     item_id = models.ForeignKey(inventory, on_delete=modes.CASCADE)
