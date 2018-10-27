@@ -16,15 +16,15 @@ class user(models.Model):
     
 class cart(models.Model):
     username = models.ForeignKey(user, on_delete=modes.CASCADE)
-    item = models.DecimalField(max_digits=5)
+    item = models.ForeignKey(inventory, on_delete=modes.CASCADE)
     quantity = models.DecimalField(max_digits=5)
     
     def __str__(self):
-        return f'{self.username} ({self.item})'
+        return f'{self.username} ({self.item})
 
 class content(models.Model):
     username = models.ForeignKey(user, on_delete=modes.CASCADE)
-    item = models.DecimalField(max_digits=5)
+    item = models.ForeignKey(inventory, on_delete=modes.CASCADE)
     quantity = models.DecimalField(max_digits=5)
     orderID = models.ForeignKey(orders, on_delete=modes.CASCADE)
     
