@@ -38,7 +38,7 @@ class Location(models.Model):
 	longitude = models.FloatField
 	altitude = models.IntegerField
 	
-	def _str_(self);
+	def _str_(self):
 		return self.name
 
 class Distance(models.Model):
@@ -52,3 +52,14 @@ class Distance(models.Model):
 	
 	def calculate(self):
 		return mpu.haversine_distance((placeA.latitude, placeA.longitude), (placeB.latitude, placeB.longitude))
+
+class orders(models.Model):
+	orderID=models.DecimalField(max_digit=10)
+	content=models.CharField(max_length=200)
+	username=models.ForeignKey(user,on_delete=models.CASCADE)
+	status=models.CharField(max_length=200)
+	priority=models.CharField(max_length=200)
+	
+	def __str__(self):
+		return self.orderID
+		
