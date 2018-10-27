@@ -70,7 +70,6 @@ class Distance(models.Model):
 
 class orders(models.Model):
 	orderID=models.DecimalField(max_digit=12)
-	content=models.CharField(max_length=200)
 	owner=models.ForeignKey(user,on_delete=models.CASCADE)
 	username=user.objects.select_related().get(owner.username)
 	status=models.CharField(max_length=200)
