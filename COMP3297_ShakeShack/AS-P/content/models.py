@@ -55,6 +55,10 @@ class Location(models.Model):
 class Distance(models.Model):
 	placeA = models.ForeignKey(Location, on_delete=models.CASCADE)
 	placeB = models.ForeignKey(Location, on_delete=models.CASCADE)
+	placeAlatitude = Location.objects.select_related().get(placeA.latitude)
+	placeBlatitude = Location.objects.select_related().get(placeB.latitude)
+	placeAlongitude = Location.objects.select_related().get(placeA.longitude)
+	placeBlongitude = Location.objects.select_related().get(placeB.longitude)
 	distance = models.FloatField(default = 0.0)
 	
 	def save(self, *args, **kwargs):
@@ -62,7 +66,7 @@ class Distance(models.Model):
 		super(Distance, self).save(*args, **kwargs)
 	
 	def calculate(self):
-		return mpu.haversine_distance((placeA.latitude, placeA.longitude), (placeB.latitude, placeB.longitude))
+		return mpu.haversine_distance((placeAlatitude, placeAlongitude), (placeBlatitude, placeBlongitude))
 
 class orders(models.Model):
 	orderID=models.DecimalField(max_digit=12)
