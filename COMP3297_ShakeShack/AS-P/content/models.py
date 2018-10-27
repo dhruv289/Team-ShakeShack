@@ -55,10 +55,10 @@ class Location(models.Model):
 class Distance(models.Model):
 	placeA = models.ForeignKey(Location, on_delete=models.CASCADE)
 	placeB = models.ForeignKey(Location, on_delete=models.CASCADE)
-	placeAlatitude = Location.onjects.select_related().get(placeA.latitude)
-	placeBlatitude = Location.onjects.select_related().get(placeB.latitude)
-	placeAlongitude = Location.onjects.select_related().get(placeA.longitude)
-	placeBlongitude = Location.onjects.select_related().get(placeB.longitude)
+	placeAlatitude = Location.objects.select_related().get(placeA.latitude)
+	placeBlatitude = Location.objects.select_related().get(placeB.latitude)
+	placeAlongitude = Location.objects.select_related().get(placeA.longitude)
+	placeBlongitude = Location.objects.select_related().get(placeB.longitude)
 	distance = models.FloatField(default = 0.0)
 	
 	def save(self, *args, **kwargs):
