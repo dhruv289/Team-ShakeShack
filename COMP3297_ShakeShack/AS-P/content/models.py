@@ -32,7 +32,7 @@ class cart(models.Model):
     quantity = models.DecimalField(max_digits=5)
     
     def __str__(self):
-        return f'{self.username} ({self.item})
+        return f'{self.username} ({self.item})'
 
 class content(models.Model):
     username = models.ForeignKey(user, on_delete=modes.CASCADE)
