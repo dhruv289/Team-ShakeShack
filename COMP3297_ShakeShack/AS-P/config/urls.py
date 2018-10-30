@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from content.views import 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+	path('add_cart_view/', add_cart_view),
+	path('client_home_view/', client_home_view),
+	path('dispatch_home_view/', dispatch_home_view),
+	path('order_success_view/', order_success_view),
+	path('confirm_order_view/', confirm_order_view),
+	path('admin/', admin.site.urls),
 ]
