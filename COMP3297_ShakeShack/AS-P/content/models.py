@@ -1,5 +1,6 @@
 from django.db import models
 import mpu #Install via "pip install mpu --user"
+import os 
 
 # Create your models here.
 
@@ -22,6 +23,10 @@ class inventory(models.Model):
     category=models.CharField(max_length=200)
     description=models.CharField(max_length=200)
     item_id=models.DecimalField(max_digit=5)
+    image = ImageField(upload_to=get_image_path, blank=True, null=True)
+    
+    def get_image_path(instance, filename):
+	return os.path.join('photos', str(instance.id), filename)
     
     def __str__(self):
         return self.name
@@ -75,6 +80,8 @@ class orders(models.Model):
 	status=models.CharField(max_length=200)
 	priority=models.CharField(max_length=200)
 	location=user.objects.select_related().get(owner.location)
+	
 	def __str__(self):
 		return self.orderID
+	
 		
