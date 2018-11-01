@@ -1,0 +1,95 @@
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-top: 100%;
+    padding: 5px;
+    width: 150px;
+}
+}
+
+.column2 {
+	/*border: 1px solid black;
+    border-collapse: collapse;*/
+}
+
+.block {
+    display: block;
+    float:left;
+    width: 10%;
+    border: none;
+    background-color: #808080;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.block2 {
+    display: block;
+    float: left;
+    width: 10%;
+    border: none;
+    background-color: #808080;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.divider{
+	width:5px;
+	height:auto;
+	display:inline-block;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+
+<h2>Order Page</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="1.jpg" alt="Paris" style="width:250px">
+  </div>
+  <div class="column2">
+
+  	<table style="
+    border:1px solid black;
+    border-collapse:collapse;
+	height:250px;" 
+    <tr><td>IV-1 (80ml)</td></tr>
+    <tr><td>Category: IV-fluids</td></tr>
+    <tr><td>Each Item Weight: 0.3 kg</td></tr>
+    <tr><td>Quantity: <select name="Quantity">
+    <option value="1">1</option> 
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select></td></tr>
+    <tr><td>Shipping Weight: 0.3 kg</td></tr>
+    <tr><td>Description: </td></tr>
+    <tr><td>Saline fluids with mild concentration.</td></tr>
+    </table>
+  </div>
+</div>
+<p>
+<button type="block" style="margin:50px;">CANCEL</button>
+<button type="block2" style="margin:50px;">ADD</button>
+</p>
+

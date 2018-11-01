@@ -1,0 +1,564 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"confirm_order_view"
+			],
+			[
+				"cl",
+				"client_home_view"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"I",
+				"Inventory_models"
+			],
+			[
+				"Location",
+				"Location_Data"
+			],
+			[
+				"l",
+				"latitude"
+			],
+			[
+				"place",
+				"placeA"
+			],
+			[
+				"ge",
+				"getLatitude"
+			],
+			[
+				"item",
+				"item_id"
+			],
+			[
+				"i",
+				"item_id"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"s",
+				"submit"
+			],
+			[
+				"a",
+				"align-content"
+			],
+			[
+				"al",
+				"align-self"
+			],
+			[
+				"border-s",
+				"border-spacing"
+			],
+			[
+				"border-c",
+				"border-collapse"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"b",
+				"border\tAttr"
+			],
+			[
+				"ce",
+				"cellspacing\tAttr"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"nu",
+				"number_2"
+			],
+			[
+				"num",
+				"number_1"
+			],
+			[
+				"number",
+				"number_2"
+			],
+			[
+				"m",
+				"main\tmain()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "AS-P/Pages/views.py",
+			"settings":
+			{
+				"buffer_size": 579,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AS-P/Templates/dispatcher_home_view.html",
+			"settings":
+			{
+				"buffer_size": 1199,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AS-P/Templates/client_home_view.html",
+			"settings":
+			{
+				"buffer_size": 2386,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AS-P/Templates/add_cart_view.html",
+			"settings":
+			{
+				"buffer_size": 1820,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AS-P/config/urls.py",
+			"settings":
+			{
+				"buffer_size": 1103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Pages",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates"
+	],
+	"file_history":
+	[
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Dispatcher/apps.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config/settings.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Pages/apps.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/order_success_view.html",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/confirm_order_view.html",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/order_page.html",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Inventory/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Inventory/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/users/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/users/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Location_Data/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Location_Data/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/dispatcher/admin.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Location_Data/apps.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/users/apps.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client/migrations/__init__.py",
+		"/Users/Dhruv/Desktop/URLS/dispatcher_home_screen copy.html",
+		"/Users/Dhruv/Desktop/URLS/dispatcher_home_screen.html",
+		"/Users/Dhruv/Desktop/URLS/login_screen.html",
+		"/Users/Dhruv/Desktop/package-lock.json",
+		"/Users/Dhruv/Downloads/mapping-master/routes/index.js",
+		"/Users/Dhruv/Downloads/mapping-master/package.json",
+		"/Users/Dhruv/Downloads/mapping-master/createSchema.js",
+		"/Users/Dhruv/Downloads/mapping-master/app.js",
+		"/Users/Dhruv/Downloads/mapping-master/routes/databaseHandler.js",
+		"/Users/Dhruv/Downloads/mapping-master/routes/fetchDB.js",
+		"/Users/Dhruv/Downloads/mapping-master/package-lock.json",
+		"/Users/Dhruv/Downloads/mapping-master/public/javascripts/functions.js",
+		"/Users/Dhruv/Downloads/mapping-master/public/javascripts/leaflet-dvf.js",
+		"/Users/Dhruv/Desktop/HKU/Semester 4/COMP2120-Computer Organization/Assignments/Assignment 4-20180325/prog2/q3",
+		"/Users/Dhruv/Desktop/HKU/Semester 4/COMP2120-Computer Organization/Assignments/Assignment 4-20180325/prog2/prog2",
+		"/Users/Dhruv/Desktop/prog/q2",
+		"/Users/Dhruv/Desktop/prog/prog copy",
+		"/Users/Dhruv/Desktop/prog/prog",
+		"/Users/Dhruv/Downloads/latinmodern-math-1959/doc/test-context-latinmodern_math.tex",
+		"/Users/Dhruv/Desktop/iOS porgramming/NSTimers/NSTimers/Assets.xcassets/AppIcon.appiconset/Contents.json",
+		"/Users/Dhruv/Desktop/HKU/Semester 3/COMP2123-Programming tech and tool/Course Material/Lecture Slides/Python/email.py",
+		"/Users/Dhruv/Desktop/dhruv docs/helpfri/hw2.cpp",
+		"/untitled.py",
+		"/try.py",
+		"/maze.py",
+		"/Users/Dhruv/Desktop/hw.cpp",
+		"/Users/Dhruv/Desktop/C++/project 1/HW1/HW1/main.cpp",
+		"/Users/Dhruv/Desktop/C++/task1.cpp",
+		"/task1",
+		"/Users/Dhruv/Desktop/C++/prog1.cpp",
+		"/Users/Dhruv/Desktop/prog2.cpp",
+		"/Users/Dhruv/Desktop/prog1",
+		"/Users/Dhruv/Desktop/#include"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "AS-P/Pages/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								566,
+								566
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "AS-P/Templates/dispatcher_home_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1199,
+								1199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "AS-P/Templates/client_home_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1512,
+								1512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1077.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "AS-P/Templates/add_cart_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1367,
+								1367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 597.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "AS-P/config/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 125.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 385.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

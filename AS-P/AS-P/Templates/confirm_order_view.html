@@ -1,0 +1,86 @@
+<title>Cart Page</title>
+<style>
+body {
+    font-family: Arial;
+    color: black;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+
+}
+
+.right {
+    right: 0;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.TextAreaSize {
+    min-width: 200px;
+    min-height: 160px; 
+}
+
+</style>
+
+
+<div class="split left">
+  <div>
+    <h2>Order List</h2>
+    <table style="width:100%">
+	<tr>
+		<td width="5%">1.</td>
+		<td width="75%">IV-1(80 ML)</td>
+		<td width="5%">QTY:</td>
+		<td	width="15%">1</td>
+	</tr>
+	<tr>
+		<td width="5%">2.</td>
+		<td width="75%">IV-2(80 ML)</td>
+		<td width="5%">QTY:</td>
+		<td	width="15%">3</td>
+	</tr>
+	</table>
+	<br><br>
+	<table style="width:100%">
+	<tr>
+		<td width="70%">TOTAL SHIPPING WEIGHT:</td>
+		<td width="30%" align="center">1.5KG</td>
+	</tr>
+	<tr>
+		<td width="70%">ORDER PRIORITY:</td>
+		<td width="30%" align="center">
+			<select name="Priority">
+			<option value="HIGH">HIGH</option>
+			<option value="MEDIUM">MEDIUM</option>
+			<option value="LOW">LOW</option>
+			</select>
+		</td>
+	
+	</table>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <textarea readonly class="TextAreaSize" style="border:solid 1px; font-size: 16pt; max-width: 100%">
+When a particular category is selected, only the items under that category get displayed.</textarea>
+  </div>
+</div>
+	
