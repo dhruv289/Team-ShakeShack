@@ -9,7 +9,12 @@ def client_home_view(request, *args, **kwargs):
 	return render(request,"client_home_view.html",{});
 
 def dispatcher_home_view(request, *args, **kwargs):
-	return render(request,"dispatcher_home_view.html",{});
+	obj = Order.objects.filter(status = "queued")
+	context ={
+		'object' : obj
+	} 
+	return render(request,"dispatcher_home_view.html",context);
+
 
 def order_success_view(request, *args, **kwargs):
 	return render(request,"order_success_view.html",{});
