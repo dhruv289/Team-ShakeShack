@@ -1,4 +1,5 @@
-
+{%extends 'base.html'%}
+{%block content%}
 	<title>Dispatcher Homepage</title>
 	<style>
 		table{
@@ -23,38 +24,21 @@
 		<th>WEIGHT</th>
 		<th>UPDATE STATUS</th>
 		</tr>
-
+		{% for order in object %}
 		<tr>
-			<td>xf1m6</td>
-			<td>IV 1 (40 ml) <br> IV2 (100 ml)</td>
-			<td>5.0 kg</td>
+			<td>{{ order.order_id }}</td>
+			<td>{{ order.status }} </td>
+			<td>{{ order.priority }}</td>
 			<td>
  			<form>
  			<input type="submit" name="change status" value="Change status to Dispatched">
  			</form>	
 			</td>
 		</tr>
-		<tr>
-			<td>xf1m6</td>
-			<td>IV 1 (40 ml) <br> IV3 (100 ml)</td>
-			<td>5.0 kg</td>
-			<td>
- 			<form>
- 			<input type="submit" name="change status" value="Change status to Dispatched">
- 			</form>	
-			</td>
-		</tr>
-		<tr>
-			<td>xf1m6</td>
-			<td>IV 1 (40 ml) <br> IV2 (20 ml) <br> IV 4 (60 ml) </td>
-			<td>7.0 kg</td>
-			<td>
- 			<form>
- 			<input type="submit" name="change status" value="Change status to Dispatched">
- 			</form>	
-			</td>
-		</tr>
+		{% endfor %}
 	</table>
 	<form>
 		<input type="submit" name="download csv" value="download csv file">
 	</form>
+
+{% endblock %}

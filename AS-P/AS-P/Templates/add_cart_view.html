@@ -1,4 +1,5 @@
-
+{%extends 'base.html'%}
+{%block content%}
 <style>
 * {
     box-sizing: border-box;
@@ -71,10 +72,10 @@
   	<table style="
     border:1px solid black;
     border-collapse:collapse;
-	height:250px;" 
-    <tr><td>IV-1 (80ml)</td></tr>
-    <tr><td>Category: IV-fluids</td></tr>
-    <tr><td>Each Item Weight: 0.3 kg</td></tr>
+    height:250px;" 
+    <tr><td>Name: {{object.name}}</td></tr>
+    <tr><td>Category: {{object.category}}</td></tr>
+    <tr><td>Each Item Weight: {{object.weight}} kg</td></tr>
     <tr><td>Quantity: <select name="Quantity">
     <option value="1">1</option> 
     <option value="2">2</option>
@@ -82,9 +83,9 @@
     <option value="4">4</option>
     <option value="5">5</option>
     </select></td></tr>
-    <tr><td>Shipping Weight: 0.3 kg</td></tr>
+    <tr><td>Shipping Weight: {{object.weight}} kg</td></tr>
     <tr><td>Description: </td></tr>
-    <tr><td>Saline fluids with mild concentration.</td></tr>
+    <tr><td>{{object.description}}</td></tr>
     </table>
   </div>
 </div>
@@ -93,3 +94,5 @@
 <button type="block2" style="margin:50px;">ADD</button>
 </p>
 
+
+{%endblock%}
