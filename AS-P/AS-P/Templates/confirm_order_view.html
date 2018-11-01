@@ -1,3 +1,5 @@
+<html>
+<head>
 <title>Cart Page</title>
 <style>
 body {
@@ -32,13 +34,22 @@ body {
     text-align: center;
 }
 
+.buttonLocation {
+    position: absolute;
+    top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .TextAreaSize {
     min-width: 200px;
     min-height: 160px; 
 }
 
 </style>
-
+</head>
+<body>
 
 <div class="split left">
   <div>
@@ -72,15 +83,25 @@ body {
 			<option value="LOW">LOW</option>
 			</select>
 		</td>
-	
 	</table>
+</div>
+<div class="buttonLocation">
+	<button type="button">GO BACK</button>
   </div>
 </div>
+
 
 <div class="split right">
   <div class="centered">
     <textarea readonly class="TextAreaSize" style="border:solid 1px; font-size: 16pt; max-width: 100%">
 When a particular category is selected, only the items under that category get displayed.</textarea>
   </div>
+    <div class="buttonLocation">
+	<button type="button">CONFIRM</button>
+  </div>
 </div>
 	
+	
+
+</body>
+</html>
