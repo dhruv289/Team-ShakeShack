@@ -1,4 +1,10 @@
 {%extends 'base.html'%}
+
+{% block username%}
+
+{{username}}
+
+{% endblock%}
 {%block content%}
 <style>
 .top{
@@ -74,57 +80,87 @@ height:100%;
 
 </div>
 <div class="column left">
-<h1>My First CSS Example</h1>
+<table>
+  <tr>
+    <th><h1>CATEGORIES</h1></th>
+  </tr>
+  <tr>
+    <td>
+      <form>
+        <input type="hidden" name="username" value={{username}}>
+        <input type="hidden" name="category" value ="IV">
+        <input type="Submit" value="IV">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <form>
+        <input type="hidden" name="username" value={{username}}>
+        <input type="hidden" name="category" value ="Others">
+        <input type="Submit" value="Others">
+      </form>
+    </td>
+  </tr>
+</table>
 </div>
 <div class="column right">
+  <h1 align="center">CART</h1>
+  <table cellspacing="5" align="center">
+    <th align="center">Items</th>
+    <th align="center">Quantity</th>
+    <th align="center">Weight</th>
+    {% for present_item in object %}
+    <tr align="center">
+      <td>
+        {{present_item.item.name}}       
+      </td>
+      <td>
+        {{present_item.quantity}}
+      </td>
+      <td>
+        {{present_item.shipping_weight}}
+      </td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th>
+        Total weight:
+      </th>
+      <th></th>
+      <th>
+        {{total_weight}}
+      </th>
+    </tr>
+  </table>
 <div id="mybutton">
-<button type="submit" style:"width=80px; height=30px;">Checkout</button>
+<button type="submit" name="action" value="checkout" style:"width=80px; height=30px;">Checkout</button>
 </div>
 </div>
 <div class="middle">
-<div class=" search">
-<input type="text" placeholder="Search.." name="search">
-      <button type="submit">Submit</button>
-</div>
+<form>
+  <input type="hidden" name="username" value={{username}}>
+  <input type="search" name="search" size="100">
+  <input type="submit" value="Search">
+</form>
+<table>
+<tr>
+{% for item in items %}
+{% if forloop.counter|divisibleby:4%}
+</tr>
+<tr>
+{% endif %}
+<td>
 <div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg"  width="600" height="400">
+  <a href="http://127.0.0.1:8000/add_cart_view?username={{username}}&item_id={{item.item_id}}" target="_blank">
+  <img src="/img.jpg" alt={{item.description}} width="600" height="400">
+  <div class="desc">{{item.name}}</div>
   </a>
-  <div class="desc">Add a description of the image here</div>
 </div>
-<div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg"  width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg"  width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg"  width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<div class="pic">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="5terre.jpg" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-
-
+</td>
+{% endfor %}
+</tr>
+</table>
 </div>
 
 {%endblock%}
