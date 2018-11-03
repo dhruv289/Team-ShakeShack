@@ -53,7 +53,11 @@ body {
 
 <div class="header">
   <h1><font size="11" text-align="left">AS-P</font></h1>
-  <p align=right><font size="3">MR. CLINIC MANAGER</font></p> 
+  <p align=right><font size="3">
+    {% block username %}
+    Mr. Client Manager
+    {% endblock %}
+  </font></p> 
 </div>
   
 

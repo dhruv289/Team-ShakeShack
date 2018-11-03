@@ -1,15 +1,23 @@
 {%extends 'base.html'%}
 {%block content%}
-	<title>Order Confirmation</title>
+
+<title>Order Confirmation</title>
 
 <center>
 	<h2>Order confirmation</h2>
-	<p>Order ID: x1h4cl<br>
-	Status: Queued for Processing<br>
-	Date & Time: 5/10/2018 4:30 p.m.</p>
+
+	<p>Order ID: {{ object.orderID }}<br><br>
+	Status: {{ object.status }}
+	<p id="demo"></p></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = "Date & Time: " + d;
+</script>
+
 	<h3>Order Successful</h3>
-	<form action="client_home_view/" method="post">
-		<input type = "submit" name = "ok_button" value ="OK" />
+	<form>
+		<input type="submit" value="OK" onclick="self.close()">
 	</form>
 </center>
 
