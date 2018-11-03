@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest
 from django.http import HttpResponse
 
 from Orders.models import Order
 from Orders.models import content
+from client.models import cart
+from users.models import user
 
 from Inventory.models import Item
 # Create your views here.
@@ -64,4 +66,38 @@ def order_success_view(request, *args, **kwargs):
 	return render(request,"order_success_view.html",{});
 
 def confirm_order_view(request, *args, **kwargs):
-	return render(request,"confirm_order_view.html",{});
+	print(request.method)
+	print(request.GET.get("BACK"))
+	print(request.GET)
+	Account = user.objects.get(username = "TEST")
+	obj = cart.objects.filter(username = Account)
+	print(obj)
+	get_params = request.GET
+	if 'BACK' in get_params:
+		Goback = request.GET.get("BACK")
+		if Goback == '-1':
+			return redirect('../client_home_view/')
+
+
+	if 'Really' in get_params:
+		answer = request.GET.get('Priority')
+		print(answer)
+		Makeorder = Order.objects.create(orderID = 3, owner = Account, status="Queued for processing", priority = answer)
+		for oneitem in obj:
+			p = content.objects.create(username=Account, item_id=oneitem.item, quantity=oneitem.quantity, orderID=Makeorder)
+		orderInfo ={
+			'orderID' : Makeorder
+		}
+		return render(request, "order_success_view.html", orderInfo)
+
+
+	totalweight = 0;
+	for oneitem in obj:
+		totalweight += oneitem.item.weight*oneitem.quantity
+	context ={
+		'object' : obj,
+		'weight' : totalweight
+	}
+
+	return render(request,"confirm_order_view.html",context);
+
