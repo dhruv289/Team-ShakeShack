@@ -1,4 +1,11 @@
 {%extends 'base.html'%}
+
+{% block username%}
+
+{{username}}
+
+{% endblock%}
+
 {%block content%}
 <style>
 * {
@@ -62,7 +69,7 @@
 
 
 <h2>Order Page</h2>
-
+<form>
 <div class="row">
   <div class="column">
     <img src="1.jpg" alt="Paris" style="width:250px">
@@ -76,13 +83,15 @@
     <tr><td>Name: {{object.name}}</td></tr>
     <tr><td>Category: {{object.category}}</td></tr>
     <tr><td>Each Item Weight: {{object.weight}} kg</td></tr>
-    <tr><td>Quantity: <select name="Quantity">
+    <tr><td>Quantity: 
+    <select name="Quantity">
     <option value="1">1</option> 
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
     <option value="5">5</option>
-    </select></td></tr>
+    </select>
+    </td></tr>
     <tr><td>Shipping Weight: {{object.weight}} kg</td></tr>
     <tr><td>Description: </td></tr>
     <tr><td>{{object.description}}</td></tr>
@@ -90,9 +99,11 @@
   </div>
 </div>
 <p>
-<button type="block" style="margin:50px;">CANCEL</button>
-<button type="block2" style="margin:50px;">ADD</button>
+<button type="block" style="margin:50px;" onclick="self.close()">CANCEL</button>
+<input type="hidden" name="username" value={{username}}>
+<input type="hidden" name="item_id" value={{object.item_id}}>
+<input type="submit" value="ADD" formaction="http://127.0.0.1:8000/client_home_view">
 </p>
-
+</form>
 
 {%endblock%}
