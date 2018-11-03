@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{%extends 'base.html'%}
 {% block content %}
 <title>Cart Page</title>
 <style>
@@ -11,11 +11,12 @@ body {
     height: 100%;
     width: 50%;
     position: fixed;
+    top: 30%;
     z-index: 1;
-    top: 0;
     overflow-x: hidden;
     padding-top: 20px;
 }
+
 
 .left {
     left: 0;
@@ -34,56 +35,97 @@ body {
     text-align: center;
 }
 
+.Confirmbuttonposition {
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%, 30%);
+    text-align: center;
+}
+
+.Backbuttonposition {
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%, 16%);
+    text-align: center;
+}
+
 .TextAreaSize {
     min-width: 200px;
     min-height: 160px; 
 }
 
-</style>
+form
+{
+    float:left;
+    width:50%;
+    vertical-align: bottom;
+}
+select
+{
+	transform: translate(0%, 10%);
+	vertical-align: bottom;
+}
 
+</style>
 
 <div class="split left">
   <div>
     <h2>Order List</h2>
     <table style="width:100%">
+{% for item in object %}
 	<tr>
-		<td width="5%">1.</td>
-		<td width="75%">IV-1(80 ML)</td>
+		<td width="80%">{{ item.item.name }}</td>
 		<td width="5%">QTY:</td>
-		<td	width="15%">1</td>
+		<td	width="15%">{{ item.quantity }}</td>
 	</tr>
-	<tr>
-		<td width="5%">2.</td>
-		<td width="75%">IV-2(80 ML)</td>
-		<td width="5%">QTY:</td>
-		<td	width="15%">3</td>
-	</tr>
+{% endfor %}
 	</table>
+
 	<br><br>
 	<table style="width:100%">
 	<tr>
 		<td width="70%">TOTAL SHIPPING WEIGHT:</td>
-		<td width="30%" align="center">1.5KG</td>
+		<td width="30%" align="center">{{ weight }}KG</td>
 	</tr>
 	<tr>
-		<td width="70%">ORDER PRIORITY:</td>
-		<td width="30%" align="center">
-			<select name="Priority">
-			<option value="HIGH">HIGH</option>
-			<option value="MEDIUM">MEDIUM</option>
-			<option value="LOW">LOW</option>
+		<td width="50%">ORDER PRIORITY:</td>
+		<td width="50%">
+			<form>
+			<select name="Priority" id="Priority">
+				<option value="HIGH">HIGH</option>
+				<option value="MEDIUM">MEDIUM</option>
+				<option value="LOW">LOW</option>
 			</select>
 		</td>
-	
+	</tr>
+	<tr>
+		<td align="right">
+			<div class="Confirmbuttonposition">
+			<input type="hidden" name="Really" value=-2>
+			<input type="hidden" name="username" value={{username}}>
+			<input type="submit" value="CONFIRM">
+		</div>
+		</form>
+		</td>
 	</table>
+	<div class="Backbuttonposition">
+		<form>
+			<input type="hidden" name="username" value={{username}}>
+			<input type="hidden" name="BACK" value=-1>
+			<input type="submit" value="GOBACK">
+		</form>
+	</div>
   </div>
+  
 </div>
 
 <div class="split right">
   <div class="centered">
     <textarea readonly class="TextAreaSize" style="border:solid 1px; font-size: 16pt; max-width: 100%">
 When a particular category is selected, only the items under that category get displayed.</textarea>
+
   </div>
+
 </div>
 	
 {% endblock %}
