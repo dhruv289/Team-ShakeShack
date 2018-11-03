@@ -135,7 +135,6 @@ def confirm_order_view(request, *args, **kwargs):
 	if 'Really' in get_params:
 		answer = request.GET.get('Priority')
 		Lastorder = Order.objects.latest('order_id')
-		print(Lastorder)
 		Makeorder = Order.objects.create(order_id = Lastorder.order_id+1, owner = Account, status="Queued for processing", priority = answer)
 		for oneitem in obj:
 			p = content.objects.create(username=Account, item_id=oneitem.item, quantity=oneitem.quantity, orderID=Makeorder)
