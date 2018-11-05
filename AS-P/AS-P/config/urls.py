@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Pages.views import add_cart_view, client_home_view, order_success_view, dispatcher_home_view, confirm_order_view
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 	path('add_cart_view/', add_cart_view),
@@ -25,3 +28,5 @@ urlpatterns = [
 	path('confirm_order_view/', confirm_order_view),
 	path('admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
