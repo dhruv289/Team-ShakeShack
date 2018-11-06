@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"settings"
+			],
+			[
+				"d",
+				"dirname"
+			],
+			[
+				"BA",
+				"BASE_DIR"
+			],
+			[
+				"ma",
+				"max_length"
+			],
+			[
+				"stati",
+				"static"
+			],
+			[
+				"ne",
+				"new_drone_num"
+			],
+			[
+				"Dron",
+				"Drones"
+			],
+			[
+				"pr",
+				"present_drone"
+			],
+			[
+				"pre",
+				"present_weight"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"dro",
+				"drone_num"
+			],
+			[
+				"dis",
+				"dispatcher_home_view"
+			],
+			[
 				"us",
 				"username"
 			],
@@ -26,10 +74,6 @@
 			[
 				"toa",
 				"total_weight"
-			],
-			[
-				"pr",
-				"present_item"
 			],
 			[
 				"ite",
@@ -94,10 +138,6 @@
 			[
 				"co",
 				"content_type"
-			],
-			[
-				"s",
-				"save"
 			],
 			[
 				"i",
@@ -192,14 +232,6 @@
 				"HttpRequest"
 			],
 			[
-				"d",
-				"decimal_places"
-			],
-			[
-				"ma",
-				"max_digits"
-			],
-			[
 				"I",
 				"Inventory_models"
 			],
@@ -276,10 +308,19 @@
 	"buffers":
 	[
 		{
-			"file": "AS-P/Orders/models.py",
+			"file": "AS-P/Inventory/models.py",
 			"settings":
 			{
-				"buffer_size": 944,
+				"buffer_size": 452,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "AS-P/Templates/add_cart_view.html",
+			"settings":
+			{
+				"buffer_size": 2175,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -351,24 +392,26 @@
 	[
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Inventory",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders"
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates"
 	],
 	"file_history":
 	[
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/client_home_view.html",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config/urls.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config/settings.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders/models.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Pages/views.py",
+		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/dispatcher/models.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/confirm_order_view.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client/models.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/add_cart_view.html",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/client_home_view.html",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Pages/views.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/dispatcher_home_view.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/order_success_view.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/order_details_view.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/base.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/users/models.py",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config/urls.py",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Orders/models.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Inventory/models.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/users/views.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Location_Data/models.py",
@@ -377,7 +420,6 @@
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Location_Data/migrations/0001_initial.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Inventory/migrations/0001_initial.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Dispatcher/apps.py",
-		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/config/settings.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Pages/apps.py",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/Templates/order_page.html",
 		"/Users/Dhruv/Desktop/HKU/Semester 5/COMP3297- Software Engineering/AS-P/AS-P/client/admin.py",
@@ -462,24 +504,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "AS-P/Orders/models.py",
+					"file": "AS-P/Inventory/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 944,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								944,
-								944
+								390,
+								390
 							]
 						],
 						"settings":
@@ -488,6 +530,36 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "AS-P/Templates/add_cart_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1118,
+								1118
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -577,7 +649,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 370.0,
+	"side_bar_width": 247.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

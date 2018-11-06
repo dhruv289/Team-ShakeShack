@@ -7,6 +7,7 @@ class Item(models.Model):
     category=models.CharField(max_length=200)
     description=models.CharField(max_length=200)
     item_id=models.DecimalField(max_digits=4,decimal_places=0)
+    image_name=models.FileField(null = True, blank=True)
     
-    def _str_(self):
-        return self.item_id
+    def __str__(self):
+        return self.name

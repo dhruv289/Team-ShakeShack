@@ -10,7 +10,7 @@ class Order(models.Model):
 	status=models.CharField(max_length=200)
 	priority=models.CharField(max_length=200)
 	creation_time = models.DateTimeField(auto_now_add=True)
-	dispatch_time = models.DateTimeField(null = True)
+	dispatch_time = models.DateTimeField(null = True, blank = True)
 
 	def __str__(self):
 		return str(self.order_id)

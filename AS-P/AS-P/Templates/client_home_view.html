@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-
+{% load static from staticfiles %}
 {% block username%}
 
 {{username}}
@@ -134,7 +134,11 @@ height:100%;
     </tr>
   </table>
 <div id="mybutton">
-<button type="submit" name="action" value="checkout" style:"width=80px; height=30px;">Checkout</button>
+<form>
+<input type="hidden" name="username" value={{username}}>
+<input type="hidden" name="checkout" value="{{username}}">
+<input type="submit" value="Checkout" formaction="http://127.0.0.1:8000/confirm_order_view">
+</form>
 </div>
 </div>
 <div class="middle">
@@ -153,7 +157,7 @@ height:100%;
 <td>
 <div class="pic">
   <a href="http://127.0.0.1:8000/add_cart_view?username={{username}}&item_id={{item.item_id}}" target="_blank">
-  <img src="/img.jpg" alt={{item.description}} width="600" height="400">
+  <img src="{{item.image_name.url}}" alt={{item.description}} width="600" height="400">
   <div class="desc">{{item.name}}</div>
   </a>
 </div>

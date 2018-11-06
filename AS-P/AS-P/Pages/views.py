@@ -10,6 +10,8 @@ from users.models import user
 from client.models import cart
 
 from Inventory.models import Item
+
+from dispatcher.models import Drones, Drones_content
 # Create your views here.
 import csv
 
@@ -62,7 +64,7 @@ def client_home_view(request, *args, **kwargs):
 	if 'search' in get_params:
 		keyword = request.GET.get('search', 'invalid')
 		obj = Item.objects.filter(name__icontains = keyword)
-	
+
 	object = {'object': items, 'username': username, 'items': obj, 'total_weight': total}
 	return render(request,"client_home_view.html",object);
 
@@ -91,7 +93,18 @@ def dispatcher_home_view(request, *args, **kwargs):
 			order_to_update.status = "Dispatched"
 			order_to_update.dispatch_time = datetime.now()
 			order_to_update.save()
-
+			#drone_list = Drone.objects.filter(present_weight<25)
+			#flag = 0
+			#for present_drone in drone_list:
+			#	if order_to_update.weight+present_drone.present_weight <=25:
+			#		flag=1
+			#		new_content = Drones_content(drone=present_drone,order=order_to_update)
+			#		new_content.save()
+			#if flag == 0:
+			#	new_drone_num = Drones.objects.all().count()+1
+			#	new_drone = Drones(drone_num = new_drone_num, present_weight=0.00)
+			#	new_content = Drones_content(drone=present_drone,order=order_to_update)
+			#	new_content.save()
 
 	if 'download' in get_params:
 		response = HttpResponse(content_type='text/csv')
@@ -131,11 +144,11 @@ def confirm_order_view(request, *args, **kwargs):
 		if Goback == '-1':
 			return redirect('../client_home_view?username='+username)
 
-
 	if 'Really' in get_params:
 		answer = request.GET.get('Priority')
-		Lastorder = Order.objects.latest('order_id')
-		Makeorder = Order.objects.create(order_id = Lastorder.order_id+1, owner = Account, status="Queued for processing", priority = answer)
+		new_order_num = Order.objects.all().count()+1
+
+		Makeorder = Order.objects.create(order_id = new_order_num, owner = Account, status="Queued for processing", priority = answer)
 		for oneitem in obj:
 			p = content.objects.create(username=Account, item_id=oneitem.item, quantity=oneitem.quantity, orderID=Makeorder)
 		orderInfo ={
