@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'Inventory.apps.InventoryConfig',
     'Location_Data.apps.LocationDataConfig',
     'Orders.apps.OrdersConfig',
-    'Status.apps.StatusConfig',
     'warehouse.apps.WarehouseConfig',
     'Pages.apps.PagesConfig',
 ]

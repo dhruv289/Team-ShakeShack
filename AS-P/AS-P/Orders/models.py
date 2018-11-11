@@ -1,7 +1,7 @@
 from django.db import models
 from users import models as users_models
 from Inventory import models as Inventory_models
-
+from Location_Data import models as Location_Data_models
 
 # Create your models here.
 class Order(models.Model):
@@ -11,6 +11,8 @@ class Order(models.Model):
 	priority=models.CharField(max_length=200)
 	creation_time = models.DateTimeField(auto_now_add=True)
 	dispatch_time = models.DateTimeField(null = True, blank = True)
+	location=models.ForeignKey(Location_Data_models.Location, on_delete=models.CASCADE, null=True, blank=True)
+	weight = models.DecimalField(max_digits=10,decimal_places=4,null=True)
 
 	def __str__(self):
 		return str(self.order_id)

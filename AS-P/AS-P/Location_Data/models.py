@@ -16,14 +16,17 @@ class Location(models.Model):
 #		return self.longitude
 #
 class Distance(models.Model):
-#	placeA = models.ForeignKey(Location, on_delete=models.CASCADE)
-#	placeB = models.ForeignKey(Location, on_delete=models.CASCADE)
-	
-	placeA = models.CharField(max_length=200)
-	palceB = models.CharField(max_length=200)
-	distance = models.FloatField(default = 0.0)
+	placeA=models.CharField(max_length=200,null=True)
+	placeB=models.CharField(max_length=200,null=True)
+	distance=models.FloatField(default=0.00)
+
+	def __str__(self):
+		return self.placeA+" to "+self.placeB
 
 
+
+	def getDistance(placeA,placeB):
+		return distance
 	
 #	def save(self, *args, **kwargs):
 #		self.distance = self.calculate()
