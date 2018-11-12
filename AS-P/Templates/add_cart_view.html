@@ -1,0 +1,135 @@
+{%extends 'base.html'%}
+
+{% block username%}
+
+{{username}}
+
+{% endblock%}
+
+{%block content%}
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-top: 100%;
+    padding: 5px;
+    width: 150px;
+}
+}
+
+.column2 {
+	/*border: 1px solid black;
+    border-collapse: collapse;*/
+}
+
+.block {
+    display: block;
+    float:left;
+    width: 10%;
+    border: none;
+    background-color: #808080;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.block2 {
+    display: block;
+    float: left;
+    width: 10%;
+    border: none;
+    background-color: #808080;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.divider{
+	width:5px;
+	height:auto;
+	display:inline-block;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+
+<h2>Order Page</h2>
+<form>
+<div class="row">
+  <div class="column">
+    <img src="{{object.image_name.url}}" alt="Paris" style="width:250px">
+  </div>
+  <div class="column2">
+
+  	<table style="
+    border:1px solid black;
+    border-collapse:collapse;
+    height:250px;" 
+    <tr><td>Name: {{object.name}}</td></tr>
+    <tr><td>Category: {{object.category}}</td></tr>
+    <tr><td>Each Item Weight: {{object.weight}} kg</td></tr>
+    <tr><td>Quantity: 
+    <select name="Quantity">
+    <option value="1">1</option> 
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option> 
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option> 
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option> 
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option> 
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option> 
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    
+    </select>
+    </td></tr>
+    <tr><td>Shipping Weight: {{object.weight}} kg</td></tr>
+    <tr><td>Description: </td></tr>
+    <tr><td>{{object.description}}</td></tr>
+    </table>
+  </div>
+</div>
+<p>
+<button type="block" style="margin:50px;" onclick="self.close()">CANCEL</button>
+<input type="hidden" name="username" value={{username}}>
+<input type="hidden" name="item_id" value={{object.item_id}}>
+<input type="submit" value="ADD" formaction="http://127.0.0.1:8000/client_home_view">
+</p>
+</form>
+
+{%endblock%}

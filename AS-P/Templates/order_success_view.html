@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<title>Order Confirmation</title>
+
+<center>
+	<h2>Order confirmation</h2>
+
+	<p>Order ID: {{ object.orderID }}<br><br>
+	Status: {{ object.status }}
+	<p id="demo"></p></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = "Date & Time: " + d;
+</script>
+
+	<h3>Order Successful</h3>
+	<form>
+		<input type="submit" value="OK" onclick="self.close()">
+	</form>
+</center>
+
+{%endblock%}

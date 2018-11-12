@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #1a8cff;
+    padding: 6px;
+    color: white;
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    display:inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><font size="11" text-align="left">AS-P</font></h1>
+  <p align=right><font size="3">
+    {% block username %}
+    
+    {% endblock %}
+  </font></p> 
+</div>
+  
+
+<div class="topnav">
+  <a href="#">ACCOUNT DETAILS</a>
+  <a style="float:right" href="#" >LOG OUT</a>
+</div>
+
+{% block content %}
+replace me
+{% endblock %}
+
+
+  
+</body>
+</html>

@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+<center>
+	<h2>Order confirmation</h2>
+	<p>Order ID: {{order_num}}<br>
+	Status: {{status}}<br>
+	<table>
+		<th>Content</th><th>Quantity</th>
+		
+	{% for item in order_content %}
+		<tr>
+			<td> {{item.item_id.name}}
+			</td>
+			<td>{{item.quantity}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	</p>
+	<form>
+		<input type="button" value="Close this window" onclick="self.close()">
+	</form>
+</center>
+
+{%endblock%}

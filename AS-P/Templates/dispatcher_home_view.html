@@ -1,0 +1,102 @@
+{%extends 'base.html'%}
+{%block content%}
+	<title>Dispatcher Homepage</title>
+	<style>
+		table{
+			display: table;
+			border-collapse: separate;
+			border-spacing: 2px;
+			border-color: black;
+			align-self: center;
+			align-content: center;
+
+		}
+	</style>
+
+	<h1>
+		ORDER LIST
+	</h1>
+	<br>
+	<table align="center" border="1"  cellpadding="50" cellspacing="50" frame="box">
+		<tr>
+		<th>ORDER ID</th>
+		<th>ITEMS</th>
+		<th>PRIORITY</th>
+		<th>UPDATE STATUS</th>
+		</tr>
+		{% for order in object %}
+		<tr>
+			<td>{{ order.order_id }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="view_details" value={{order.order_id}}>
+ 			<input type="submit" value="View Details" formtarget="_blank" >
+ 			</form>	
+			</td>
+			<td>{{ order.priority }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="changeStatus" value={{order.order_id}}>
+ 			<input type="hidden" name="view_details" value=-1>
+ 			<input type="submit" value="Change Status to Dispatched">
+ 			</form>	
+			</td>
+		</tr>
+		{% endfor %}
+		{% for order in order_content_med %}
+		<tr>
+			<td>{{ order.order_id }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="view_details" value={{order.order_id}}>
+ 			<input type="submit" value="View Details" formtarget="_blank" >
+ 			</form>	
+			</td>
+			<td>{{ order.priority }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="changeStatus" value={{order.order_id}}>
+ 			<input type="hidden" name="view_details" value=-1>
+ 			<input type="submit" value="Change Status to Dispatched">
+ 			</form>	
+			</td>
+		</tr>
+		{% endfor %}
+		{% for order in order_content_low %}
+		<tr>
+			<td>{{ order.order_id }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="view_details" value={{order.order_id}}>
+ 			<input type="submit" value="View Details" formtarget="_blank" >
+ 			</form>	
+			</td>
+			<td>{{ order.priority }}</td>
+			<td>
+			<form>
+ 			<input type="hidden" name="changeStatus" value={{order.order_id}}>
+ 			<input type="hidden" name="view_details" value=-1>
+ 			<input type="submit" value="Change Status to Dispatched">
+ 			</form>	
+			</td>
+		</tr>
+		{% endfor %}
+		
+	</table>
+	<form>
+		 <select name="drone_num">
+    		<option value="1">1</option> 
+    		<option value="2">2</option>
+    		<option value="3">3</option>
+   		 	<option value="4">4</option>
+   			<option value="5">5</option>
+    		<option value="6">6</option> 
+    		<option value="7">7</option>
+    		<option value="8">8</option>
+    		<option value="9">9</option>
+    		<option value="10">10</option>
+		</select>
+		<input type="submit" name="download" value="download csv file">
+	</form>
+
+{% endblock %}
