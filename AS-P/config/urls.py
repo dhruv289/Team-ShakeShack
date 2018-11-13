@@ -22,6 +22,9 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
+	path('register/', register),
+	path('login/', login),
+	path('registerconfirmation/', registerconfirmation),
 	path('add_cart_view/', add_cart_view),
 	path('client_home_view/', client_home_view),
 	path('dispatcher_home_view/', dispatcher_home_view),
