@@ -72,67 +72,31 @@ def client_home_view(request, *args, **kwargs):
 	return render(request,"client_home_view.html",object);
 
 def csv_generator(clinics):
-        userName=cart.objects.all()
-        users=user.objects.all()
-        print(userName.values("username"))
-        
-        #print(users.values("username"))
-        #clinics=list()
-        #for obj in userName.values_list("username",flat=True):
-        #        print (obj)
-        #        if obj in users.values_list("username",flat=True):
-        #                print(obj)
-        #                clinic.appends(user.objects.get(username=obj))
-        #clinics.append("A")
-        #clinics.append("B")
-        #clinics.append("C")
-        #clinics.append("D")
-        print (clinics)
-        distance=Distance.objects.all()
-        placeA=distance.values_list("placeA",flat=True)
-        placeB=distance.values_list("placeB",flat=True)
-        distance=Distance.objects.filter(placeA="Queen Mary Hospital Drone Port",placeB=clinics[0])
-        print(distance.values_list("distance",flat=True))
         loop=len(clinics)
-        print(loop)
+        #print(loop)
         travel=list()
-        minDistance=999
-        clinic1=0
-        for clin in clinics:
-                if clin in placeB:
-                        distance=Distance.objects.filter(placeA="Queen Mary Hospital Drone Port",placeB=clin)
-                        for i in distance.values_list("distance",flat=True):
-                                if minDistance>i:
-                                                minDistance=i
-                                                clinic1=clin
-        for i in range(loop-1):
-                minDistance=999
-                for clinic2 in clinics:
-                        if clinic1 in placeA and clinic2 in placeB:
-                                distance=Distance.objects.filter(placeA=clinic1,placeB=clinic2)
-                                for i in distance.values_list("distance",flat=True):
-                                        if minDistance>i:
-                                                minDistance=i
-                                                nextClinic=clinic1
-                                                nowClinic=clinic2
-                                                print(minDistance)
-                clinics.remove(nextClinic)
-                travel.append(nextClinic)
-                clinic1=nowClinic
-        travel.append(clinics[0])
+        travellist=list(itertools.permutations(clinics))
+        distances=list()
+        #print(travellist)
+        for i in travellist:
+        	num=0
+        	dist=Distance.objects.filter(placeA="Queen Mary Hospital Drone Port",placeB=i[0])
+        	for x in dist.values_list("distance",flat=True):
+        		num+=x
+        	for j in range(loop-1):
+        		dist=Distance.objects.filter(placeA=i[j],placeB=i[j+1])
+        		for k in dist.values_list("distance",flat=True):
+        			num+=k
+        	dist=Distance.objects.filter(placeA=i[loop-1],placeB="Queen Mary Hospital Drone Port")
+        	for x in dist.values_list("distance",flat=True):
+        		num+=x
+        	distances.append(num)
+        print(distances)
+        for i in travellist[distances.index(min(distances))]:
+        	travel.append(i)
+        #print(travel)
+        #print("here")
         travel.append("Queen Mary Hospital Drone Port")
-        print(travel)
-        location=Location.objects.all()
-        #altitudes=location.values_list("altitude",flat=True)
-        names=location.values_list("name",flat=True)
-        #print(altitudes)
-        alt=list()
-        for clinic in travel:
-                if clinic in names:
-                        altitudes=Location.objects.filter(name=clinic)
-                        for altitude in altitudes.values_list("altitude",flat=True):
-                                alt.append(altitude)
-        print (alt)                                
         context={
                 'object':travel
         }
